@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Decision-Making</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Earth Observation Data for Agriculture</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="menu-item">
+                <label>
+                    <input type="checkbox" id="rain-toggle" class="toggle-switch">
+                    Rain
+                </label>
+            </div>
+            <div class="menu-item">
+                <label>
+                    <input type="checkbox" id="tsunami-toggle" class="toggle-switch">
+                    Tsunamis
+                </label>
+            </div>
+            <div class="menu-item">
+                <label>
+                    <input type="checkbox" id="high-water-toggle" class="toggle-switch">
+                    High Water Levels
+                </label>
+            </div>
+            <div class="menu-item">
+                <label>
+                    <input type="checkbox" id="contamination-toggle" class="toggle-switch">
+                    Water Contamination
+                </label>
+            </div>
+        </nav>
+
+        <section id="map-container">
+            <h2>Data Fetching Section</h2>
+            <p>This area will be populated with Earth observation data for agricultural insights.</p>
+            <button onclick="fetchData()">Fetch Data</button>
+            <div id="data-output"></div>
+
+            <!-- Placeholder for future map -->
+            <div id="map-placeholder"></div>
+
+            <!-- Zoom controls -->
+            <div class="zoom-controls">
+                <button id="zoom-in">+</button>
+                <button id="zoom-out">-</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
