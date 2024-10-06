@@ -6,7 +6,7 @@ from application.models import User # have to import each table/object unless fi
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template("index.html")
 
 
 #sample route with query and parameter in url
