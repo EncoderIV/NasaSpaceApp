@@ -8,6 +8,10 @@ async function fetchData() {
 
 //meteomatics code - or put in different file
 
+async function updateRain(params) {
+    
+}
+
 
 
 

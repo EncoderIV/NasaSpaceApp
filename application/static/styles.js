@@ -31,13 +31,5 @@ document.getElementById('contamination-toggle').addEventListener('change', funct
     }
 });
 
-document.getElementById('zoom-in').addEventListener('click', function () {
-    console.log('Zoom in');
-});
-
-document.getElementById('zoom-out').addEventListener('click', function () {
-    console.log('Zoom out');
-});
-
 
 //something else styling - dynamic funtionality
