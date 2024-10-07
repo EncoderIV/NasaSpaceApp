@@ -46,8 +46,9 @@ var drawControl = new L.Control.Draw({
     draw: {
         polyline: false,
         polygon: false,
-        circle: false,
+        circlemarker: false,
         marker: false,
+        circle : false,
         rectangle: true 
     },
     edit: {
