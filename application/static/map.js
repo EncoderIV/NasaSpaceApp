@@ -18,16 +18,19 @@ var vg = new VirtualGrid();
 // listen for when new cells come into the view for the first time
 vg.on("cellcreate", function(e){
     console.log(e.type, e);
+    updateRain(e);
 });
 
 // listen for when cells reenter the view
 vg.on("cellenter", function(e){
     console.log(e.type, e);
+    updateRain(e);
 });
 
 // listen for when cells leave the view
 vg.on("cellleave", function(e){
     console.log(e.type, e);
+    updateRain(e);
 });
 
 // add the grid to the map

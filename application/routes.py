@@ -9,8 +9,13 @@ def hello_world():
     return render_template("index.html")
 
 
-@app.route("/rain")
+@app.route("/rain/", methods=["GET", "POST"])
 def rain():
+    coords = request.json
+
+    
+
+
     return {}
 
 
