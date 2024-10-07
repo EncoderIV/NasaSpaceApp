@@ -9,17 +9,16 @@ async function fetchData() {
 //meteomatics code - or put in different file
 
 async function updateRain(gridCoords) {
-    console.log(gridCoords);
+    console.log(gridCoords.bounds);
 
-    data  = gridCoords.bounds
 
     fetch("/rain/",{
         "method": "POST",
         "headers": {"Content-Type": "application/json"},
-        "body": JSON.stringify(data),
+        "body": JSON.stringify(gridCoords.bounds),
     })
     .then(response => response.json())
-    .then(data => {
+    .then( data => {
         //create layer with new data
         console.log(data);
     })
