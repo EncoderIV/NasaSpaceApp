@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultural Decision-Making</title>
-    <link rel="stylesheet" href="{{ url_for('static' , filename='styles.css') }}">
-    
+    <link rel="stylesheet" href="{{ url_for('static' , filename='styles.css') }}">  
     <!--leaflet setup-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
     <!--https://unpkg.com/leaflet-virtual-grid/leaflet-virtual-grid.js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
     
 </head>
 <body>
@@ -71,6 +71,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
     <script src="/static/node_modules/leaflet-virtual-grid/dist/virtual-grid.js"></script>
-    <script src="{{ url_for('static', filename='map.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>   
 </body>
 </html>

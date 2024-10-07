@@ -34,3 +34,41 @@ vg.on("cellleave", function(e){
 vg.addTo(map);
 
 console.log("leaflet finished");
+
+
+
+// select crop feature
+
+var editableLayers=new L.FeatureGroup();
+map.addLayer(editableLayers);
+
+var drawControl = new L.Control.Draw({
+    draw: {
+        polyline: false,
+        polygon: false,
+        circle: false,
+        marker: false,
+        rectangle: true 
+    },
+    edit: {
+        featureGroup: editableLayers
+    }
+});
+
+map.addControl(drawControl);
+
+  map.on('draw:created', function (e) {  // Make sure it’s lowercase
+    var type = e.layerType,
+      layer = e.layer;
+      editableLayers.addLayer(layer);
+
+    var bounds = layer.getBounds();
+
+    var cropType = prompt("Enter the type of crop:");
+
+    if (cropType){
+        console.log("Crop Type: " + cropType);
+        console.log("Rectangle Bounds: ", bounds);
+    }
+    layer.bindPopup("Crop: " + cropType).openPopup();
+  });
